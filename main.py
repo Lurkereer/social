@@ -36,7 +36,9 @@ class Main():
         self.recordPerson = True
 
         # Sim output
-        output_name = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+        #output_name = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+
+        output_name = 'xiangyu_r'
         os.makedirs("./sim_outputs/%s" % output_name)
         self.sim_data = Sim_Data()
         self.sim_out = open("./sim_outputs/%s/output.pkl" % output_name, "wb")
@@ -53,7 +55,7 @@ class Main():
                                        who=1)  # M
         self.car_2 = AutonomousVehicle(scenario_parameters=self.P,
                                        car_parameters_self=self.P.CAR_2,
-                                       loss_style='passive_aggressive',
+                                       loss_style='reactive',
                                        who=0)  # H
 
         # Assign 'other' cars
@@ -90,7 +92,7 @@ class Main():
                 try:
                     ret, frame = self.cap.read()
                     if ret:
-                        frame = cv2.flip(frame, 0)
+                        # frame = cv2.flip(frame, 0)
                         self.out.write(frame)
                 except Exception, e:
                     print 'Exception: {}'.format(e)

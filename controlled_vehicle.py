@@ -27,13 +27,13 @@ class ControlledVehicle:
         self.states = [self.P_CAR.INITIAL_POSITION]
         self.velocity = 0
         self.actions_set = [(0,0)]
-        self.delta = 0.12 * C.VEHICLE_MAX_SPEED
+        self.delta = 0.2 * C.VEHICLE_MAX_SPEED
 
     def update(self, Humaninput):
         Throttle = 1 - Humaninput[1]
         Brake = 1 - Humaninput[2]
 
-        self.velocity = self.velocity + (Throttle - Brake) * self.delta
+        self.velocity = self.velocity + (Throttle - Brake - 0.2) * self.delta
         if self.velocity > 0:
             action = self.velocity
             if self.velocity >= C.VEHICLE_MAX_SPEED:

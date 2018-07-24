@@ -31,7 +31,7 @@ class CONSTANTS:
     # POSITION BOUNDS
     Y_MINIMUM = 0
     Y_MAXIMUM = 1
-    VEHICLE_MAX_SPEED = 0.05
+    VEHICLE_MAX_SPEED = 0.08
 
     # OPTIMIZATION
     ACTION_TIMESTEPS = 100  # 5 seconds
@@ -107,7 +107,7 @@ class CONSTANTS:
         # COLLISION BOXES
         COLLISION_BOXES = np.array([(-0.4, 0.4, -0.4, 0.4)])  # List of separate collision boxes (-x, x, -y, y)
 
-        VEHICLE_MAX_SPEED = 0.2
+        VEHICLE_MAX_SPEED = 0.4
 
         # Left Car
         CAR_1 = CarParameters(SPRITE="grey_car_sized.png",
@@ -121,7 +121,7 @@ class CONSTANTS:
 
         # Right Car
         CAR_2 = CarParameters(SPRITE="white_car_sized.png",
-                              INITIAL_POSITION=np.array([0, 3]),
+                              INITIAL_POSITION=np.array([0, 2]),
                               DESIRED_POSITION=np.array([0, -0.4]),
                               BOUND_X=np.array([-0.4, 0.4]),
                               BOUND_Y=None,

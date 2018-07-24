@@ -35,9 +35,9 @@ class Sim_Draw():
         # self.car2_image = pg.transform.rotate(pg.transform.scale(pg.image.load(asset_loc + "red_car_sized.png"),
         #                                                           (int(C.CAR_WIDTH * C.COORDINATE_SCALE * C.ZOOM),
         #                                                            int(C.CAR_LENGTH * C.COORDINATE_SCALE * C.ZOOM))), -self.P.CAR_2.ORIENTATION)
-        self.car2_image = pg.transform.rotate(pg.image.load(asset_loc + "red_car_sized.png"), -self.P.CAR_2.ORIENTATION)
+        self.car2_image = pg.transform.rotate(pg.image.load(asset_loc + "blue_car_sized.png"), -self.P.CAR_2.ORIENTATION)
 
-        self.car1_image = pg.transform.rotate(pg.image.load(asset_loc + "blue_car_sized.png"), self.P.CAR_1.ORIENTATION)
+        self.car1_image = pg.transform.rotate(pg.image.load(asset_loc + "red_car_sized.png"), self.P.CAR_1.ORIENTATION)
         self.coordinates_image = pg.image.load(asset_loc + "coordinates.png")
         self.origin = np.array([0, 0])
 

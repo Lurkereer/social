@@ -95,7 +95,7 @@ class AutonomousVehicle:
                                                     planned_actions[self.track_back][1])))
         self.actions_set.append(planned_actions[0])
         self.planned_actions_set = planned_actions
-        print 'planned_actions: {}'.format(planned_actions)
+        # print 'planned_actions: {}'.format(planned_actions)
 
     def get_actions(self):
 
